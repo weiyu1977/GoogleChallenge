@@ -8,13 +8,19 @@ https://github.com/weiyu1977/InsuranceAdvisor
 
 ## Video
 
-Record a 2-3 minute demo using this script:
+Demo video:
+
+```text
+https://github.com/weiyu1977/GoogleChallenge/raw/main/videos/insurance-advisor-demo.mp4
+```
+
+Recording script:
 
 ```text
 https://github.com/weiyu1977/GoogleChallenge/blob/main/docs/VIDEO_SCRIPT.md
 ```
 
-After recording, upload the video to YouTube or Google Drive and paste the public link into Devpost.
+If Devpost requires YouTube/Vimeo instead of a raw MP4 link, upload `videos/insurance-advisor-demo.mp4` to YouTube or Google Drive and paste that public link.
 
 ## Architecture Diagram
 

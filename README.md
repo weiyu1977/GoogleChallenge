@@ -5,6 +5,7 @@ InsuranceAdvisor helps U.S. visitors and their families decide what visitor medi
 ## Submission Links
 
 - Code: https://github.com/weiyu1977/InsuranceAdvisor
+- Video: https://github.com/weiyu1977/GoogleChallenge/raw/main/videos/insurance-advisor-demo.mp4
 - Testing access: https://insurance-advisor-demo-172581874702.us-central1.run.app
 - Architecture diagram: [docs/architecture-diagram.svg](docs/architecture-diagram.svg)
 - Video script: [docs/VIDEO_SCRIPT.md](docs/VIDEO_SCRIPT.md)

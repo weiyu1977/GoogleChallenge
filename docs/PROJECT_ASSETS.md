@@ -21,10 +21,10 @@ Recommended before submission:
 
 Suggested format: 2-3 minutes.
 
-Recommended video link after recording:
+Video link:
 
 ```text
-TODO: Upload to YouTube or Google Drive and paste the public link here.
+https://github.com/weiyu1977/GoogleChallenge/raw/main/videos/insurance-advisor-demo.mp4
 ```
 
 Ready-to-record script:
