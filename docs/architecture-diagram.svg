@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="930" viewBox="0 0 1440 930" role="img" aria-labelledby="title desc">
+  <title id="title">InsuranceAdvisor Architecture Diagram</title>
+  <desc id="desc">Client server architecture for InsuranceAdvisor, including web client, Node API, SQLite demo database, LLM document workflow package, Gemini provider adapter, external medical data APIs, and Google Cloud Run deployment target.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f6faf7; }
+      .panel { fill: #ffffff; stroke: #c9d8d0; stroke-width: 2; rx: 16; }
+      .box { fill: #ffffff; stroke: #86a89a; stroke-width: 2; rx: 14; }
+      .green { fill: #e7f4ef; stroke: #0f876f; }
+      .blue { fill: #eaf2ff; stroke: #5278b8; }
+      .gold { fill: #fff4d8; stroke: #d59a17; }
+      .red { fill: #fff0ed; stroke: #c96d5a; }
+      .text { font-family: Arial, Helvetica, sans-serif; fill: #14221c; }
+      .title { font-size: 34px; font-weight: 700; }
+      .h { font-size: 22px; font-weight: 700; }
+      .b { font-size: 17px; }
+      .s { font-size: 14px; fill: #4f625b; }
+      .arrow { stroke: #42675a; stroke-width: 2.4; fill: none; marker-end: url(#arrowhead); }
+      .dash { stroke-dasharray: 8 8; }
+    </style>
+    <marker id="arrowhead" markerWidth="12" markerHeight="8" refX="10" refY="4" orient="auto">
+      <path d="M0,0 L12,4 L0,8 Z" fill="#42675a"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" width="1440" height="930"/>
+  <text class="text title" x="52" y="58">InsuranceAdvisor Architecture</text>
+  <text class="text b" x="52" y="90">Visitor medical insurance recommendation, policy PDF analysis, healthcare search, and lifecycle tracking.</text>
+
+  <rect class="panel" x="40" y="125" width="1360" height="735"/>
+  <text class="text h" x="72" y="165">Production / contest demo flow</text>
+
+  <rect class="box green" x="70" y="220" width="230" height="100"/>
+  <text class="text h" x="92" y="258">Users</text>
+  <text class="text b" x="92" y="285">Visitors / family members</text>
+  <text class="text s" x="92" y="307">Search, compare, upload policies</text>
+
+  <rect class="box" x="380" y="205" width="260" height="130"/>
+  <text class="text h" x="405" y="245">Static Web Client</text>
+  <text class="text b" x="405" y="275">Recommendation UI</text>
+  <text class="text b" x="405" y="300">Policy analysis UI</text>
+  <text class="text b" x="405" y="325">Admin / LLM management</text>
+
+  <rect class="box blue" x="720" y="190" width="300" height="160"/>
+  <text class="text h" x="750" y="230">Node.js Express API</text>
+  <text class="text b" x="750" y="262">Auth, sessions, consent</text>
+  <text class="text b" x="750" y="288">Audit logs and admin tools</text>
+  <text class="text b" x="750" y="314">Quote adapters and records</text>
+  <text class="text b" x="750" y="340">Policy upload routing</text>
+
+  <rect class="box gold" x="1100" y="205" width="230" height="130"/>
+  <text class="text h" x="1124" y="245">SQLite Demo DB</text>
+  <text class="text b" x="1124" y="276">Users, sessions</text>
+  <text class="text b" x="1124" y="302">Records, prompts</text>
+  <text class="text b" x="1124" y="328">Diagnostics, audit</text>
+
+  <path class="arrow" d="M300 270 H380"/>
+  <path class="arrow" d="M640 270 H720"/>
+  <path class="arrow" d="M1020 270 H1100"/>
+
+  <rect class="box green" x="210" y="450" width="310" height="170"/>
+  <text class="text h" x="240" y="490">llm-document-workflow</text>
+  <text class="text b" x="240" y="522">Reusable open-source module</text>
+  <text class="text b" x="240" y="550">Prompt + schema + provider</text>
+  <text class="text b" x="240" y="578">JSON extraction and repair</text>
+  <text class="text b" x="240" y="606">PolicyAnalysisReport output</text>
+
+  <rect class="box" x="590" y="445" width="270" height="180"/>
+  <text class="text h" x="620" y="485">Provider Registry</text>
+  <text class="text b" x="620" y="518">Gemini API key mode</text>
+  <text class="text b" x="620" y="546">Optional Vertex AI ADC</text>
+  <text class="text b" x="620" y="574">Mock provider for tests</text>
+  <text class="text b" x="620" y="602">Future OpenAI / Anthropic</text>
+
+  <rect class="box blue" x="940" y="450" width="310" height="170"/>
+  <text class="text h" x="970" y="490">Gemini Document AI</text>
+  <text class="text b" x="970" y="522">PDF and scanned PDF reading</text>
+  <text class="text b" x="970" y="550">Structured answer generation</text>
+  <text class="text b" x="970" y="578">Source-aware policy review</text>
+  <text class="text s" x="970" y="606">No Google project required in API key mode</text>
+
+  <path class="arrow" d="M870 350 C805 390 600 405 520 450"/>
+  <path class="arrow" d="M520 535 H590"/>
+  <path class="arrow" d="M860 535 H940"/>
+  <path class="arrow" d="M365 450 C430 390 690 370 820 350"/>
+
+  <rect class="box" x="120" y="700" width="280" height="95"/>
+  <text class="text h" x="145" y="737">Healthcare Search</text>
+  <text class="text b" x="145" y="766">Google Maps iframe</text>
+  <text class="text b" x="145" y="790">NPPES / CMS public data</text>
+
+  <rect class="box" x="450" y="700" width="280" height="95"/>
+  <text class="text h" x="475" y="737">Financial Assistance</text>
+  <text class="text b" x="475" y="766">Hospital aid workflow</text>
+  <text class="text b" x="475" y="790">Bill negotiation templates</text>
+
+  <rect class="box" x="780" y="700" width="280" height="95"/>
+  <text class="text h" x="805" y="737">Quote / Provider Layer</text>
+  <text class="text b" x="805" y="766">Deep links and adapters</text>
+  <text class="text b" x="805" y="790">Catalog + monitoring</text>
+
+  <rect class="box red" x="1110" y="700" width="230" height="95"/>
+  <text class="text h" x="1135" y="737">Cloud Run Demo</text>
+  <text class="text b" x="1135" y="766">Containerized Node app</text>
+  <text class="text b" x="1135" y="790">Min instance for demo</text>
+
+  <path class="arrow dash" d="M780 350 C690 450 390 610 260 700"/>
+  <path class="arrow dash" d="M845 350 C785 455 640 615 590 700"/>
+  <path class="arrow dash" d="M900 350 C925 465 925 615 920 700"/>
+  <path class="arrow dash" d="M1020 315 C1135 390 1230 560 1225 700"/>
+</svg>
